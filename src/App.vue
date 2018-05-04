@@ -9,9 +9,14 @@
 </template>
 
 <script>
-Vue.use(VueMaterial.default)
+import ListPage from './components/ListPage'
+import DialogCustom from './components/matDialog'
+import WineItem from './components/WineItem'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    ListPage, DialogCustom, WineItem
+  }
 }
 </script>
 
@@ -42,6 +47,7 @@ export default {
   .content {
     margin-left: 43%;
     width: 57%;
+    height: 100vh;
   }
   body {
     margin: 0;

@@ -43,7 +43,7 @@ export default {
   font-family: Awesome;
   font-size: 66px;
   color: rgb(58, 0, 0);
-  margin: 0;
+  margin: 0 0 40px 0;
 }
 .text {
   font-family: Awesome;

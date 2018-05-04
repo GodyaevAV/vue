@@ -1,9 +1,9 @@
 <template>
   <div class="bottomBlock">
-    <div>bottles: {{bottles}}</div>
-    <div>total: {{total}}</div>
+    <div>bottles: {{totalAndBottles.bottles}}</div>
+    <div>total: {{totalAndBottles.total}}</div>
     <div class="button">
-        <button class="button_btnPay">pay</button>
+        <button class="button_btnPay" @click="$emit('pay')">pay</button>
     </div>
   </div>
 </template>
@@ -11,7 +11,11 @@
 <script>
 export default {
   name: 'bottomPanel',
-  props: ['bottles', 'total']
+  computed: {
+    totalAndBottles () {
+      return this.$store.getters.totalAndBottles
+    }
+  }
 }
 </script>
 
@@ -26,6 +30,7 @@ export default {
     height: 100%;
     color: white;
     font-size: 24px;
+    cursor: pointer;
 }
 .bottomBlock {
     position: fixed;
